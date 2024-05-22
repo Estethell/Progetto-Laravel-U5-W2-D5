@@ -24,7 +24,7 @@
         <label for="img" class="form-label">Image url</label>
         <input type="text" class="form-control" id="img" name="img" value="{{ $product->img }}">
     </div>
-    <button type="submit" class="btn btn-primary">invia</button>
+    <button type="submit" class="btn btn-success">invia</button>
 
 </form>
 

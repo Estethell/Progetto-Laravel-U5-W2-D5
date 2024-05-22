@@ -23,7 +23,7 @@
         <label for="img" class="form-label">Image url</label>
         <input type="text" class="form-control" id="img" name="img">
     </div>
-    <button type="submit" class="btn btn-primary">Invia</button>
+    <button type="submit" class="btn btn-success">Invia</button>
 
 </form>
 
