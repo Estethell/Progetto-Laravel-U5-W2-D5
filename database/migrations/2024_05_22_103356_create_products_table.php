@@ -14,9 +14,14 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name', 100);
+            $table->string('description', 1000);
+            $table->integer('price')->nullable();
+            $table->string('brand', 30);
+            $table->string('img', 300)->nullable();
+            $table->bigInteger('user_id')->nullable(); //user_id tabella libri
         });
     }
-
     /**
      * Reverse the migrations.
      */
