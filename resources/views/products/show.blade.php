@@ -1,9 +1,10 @@
 @include('includes.init')
 @include('includes.navbar')
 
-<div class="d-flex justify-content-center my-5"><img    src=" {{ $product->img }}"></img></div>
-<h1>{{ $product->title }}</h1>
-<p class="card-text text-center my-5 fw-bold">{{$product->description}}</p>
+<div class="d-flex flex-column align-items-center my-5">
+    <img class="rounded-5"   src=" {{ $product->img }}"></img>
+<h1 class="mt-5">{{ $product->name }}</h1></div>
+<p class="card-text text-center m-5 p-5 fw-bold border rounded-5" >{{$product->description}}</p>
 
 
 

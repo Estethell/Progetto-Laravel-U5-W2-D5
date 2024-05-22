@@ -13,10 +13,6 @@
         <input type="text" class="form-control" id="description" name="description" value="{{ $product->description }}">
     </div>
     <div class="mb-3">
-        <label for="author" class="form-label">Autore</label>
-        <input type="text" class="form-control" id="author" name="author" value="{{ $product->author }}">
-    </div>
-    <div class="mb-3">
         <label for="brand" class="form-label">Marchio</label>
         <input type="text" class="form-control" id="brand" name="brand" value="{{ $product->brand }}">
     </div>

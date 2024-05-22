@@ -65,7 +65,7 @@ class ProductController extends Controller
    
     {
         if (Auth::user()->id !== $product->user_id) abort(401);
-        return view('books.edit', compact('book'));
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -76,17 +76,15 @@ class ProductController extends Controller
         if (Auth::user()->id !== $product->user_id) abort(401);
         $data = $request->all();
 
-        $product->title = $data['title'];
-        $product->author = $data['author'];
-        $product->price = $data['price'];
+        $product->name = $data['name'];
+        $product->description = $data['description'];
         $product->brand = $data['brand'];
+        $product->price = $data['price'];
         $product->img = $data['img'];
         $product->update();
 
 
-        return redirect()->route('products.show', compact('book'));
-       
-       
+        return redirect()->route('products.show', compact('product'));
     }
 
     /**
@@ -94,6 +92,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        if (Auth::user()->id !== $product->user_id) abort(401);
+       $product->delete();
+       return redirect()->route('products.index');
     }
 }
